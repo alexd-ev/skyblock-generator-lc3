@@ -9,5 +9,8 @@ build:
 	laser -a src/*.asm
 	mv src/*.obj bin/
 
-run:
+run: build
 	lc3 bin/*.obj
+
+clean:
+	rm -rf bin/
