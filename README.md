@@ -5,7 +5,11 @@ See my C++ version which showcases removing, recreating and adding the chest and
 [Create Island Video](https://github.com/user-attachments/assets/41e34aeb-3628-47de-9992-2c4d6e8a751b)
 
 ## Technical Specification
-[Spigot](https://www.spigotmc.org/wiki/spigot-installation/) server with the [ELCI](https://github.com/rozukke/ELCI/releases/tag/test-release) plugin is required. Once the server is running, join the server with `localhost` as the Server Address. To run the program, the [mcpp](https://github.com/rozukke/mcpp) library must be installed to build the [LC-3](https://github.com/rozukke/lc3-vm-mcpp) VM which is also required.
+[Spigot](https://www.spigotmc.org/wiki/spigot-installation/) server with the [ELCI](https://github.com/rozukke/ELCI/releases/tag/test-release) plugin is required. Once the server is running, join the server with `localhost` as the Server Address. To run the program, the [mcpp](https://github.com/rozukke/mcpp) library must be installed to build the LC-3 simulator. If on Linux/WSL run this command to update the system's shared library cache:
+```bash
+sudo ldconfig
+```
+Then install the [LC-3](https://github.com/rozukke/lc3-vm-mcpp) VM.
 
 ### Linux/WSL/macOS
 Download the released `skyblock-generator.obj` executable found here: https://github.com/alexd-ev/skyblock-generator-lc3/releases/latest. Run the program in a terminal:
