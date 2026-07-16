@@ -1,6 +1,6 @@
 # Minecraft Skyblock Generator with LC3
 ## Overview
-See my C++ version which showcases removing, recreating and adding the chest and tree as well found here: https://github.com/alexd-ev/skyblock-generator. My Minecraft LC3 skyblock island generator project uses the [LC3](https://github.com/rozukke/lc3-vm-mcpp) VM for the [mcpp](https://github.com/rozukke/mcpp) interfacing library with Minecraft Java Edition. This project showcases creating the land of the classic skyblock island in a Minecraft world.
+See my C++ version which showcases removing, recreating and adding the chest and tree as well found here: https://github.com/alexd-ev/skyblock-generator. My Minecraft LC3 skyblock island generator project uses the [LC3](https://github.com/rozukke/lc3-vm-mcpp) VM for the [mcpp](https://github.com/rozukke/mcpp) interfacing library with Minecraft Java Edition. This project showcases creating the land of the classic skyblock island in a Minecraft world. This version posts to the Minecraft chat and places the blocks instantly, as Assembly has not native way to sleep between TRAPS.
 
 [Create Island Video](https://github.com/user-attachments/assets/41e34aeb-3628-47de-9992-2c4d6e8a751b)
 
