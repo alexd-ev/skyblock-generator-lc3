@@ -1,20 +1,26 @@
-# Minecraft Skyblock Generator with LC3
+# Minecraft Skyblock Generator with LC-3
 ## Overview
-See my C++ version which showcases removing, recreating and adding the chest and tree as well found here: https://github.com/alexd-ev/skyblock-generator. My Minecraft LC3 skyblock island generator project uses the [LC3](https://github.com/rozukke/lc3-vm-mcpp) VM for the [mcpp](https://github.com/rozukke/mcpp) interfacing library with Minecraft Java Edition. This project showcases creating the land of the classic skyblock island in a Minecraft world. This version posts to the Minecraft chat and places the blocks instantly, as Assembly has not native way to sleep between TRAPS.
+See my C++ version which showcases removing, recreating and adding the chest and tree as well found here: https://github.com/alexd-ev/skyblock-generator. My Minecraft LC-3 skyblock island generator project uses the [LC-3](https://github.com/rozukke/lc3-vm-mcpp) VM for the [mcpp](https://github.com/rozukke/mcpp) interfacing library with Minecraft Java Edition. This project showcases creating the land of the classic skyblock island in a Minecraft world. This version posts to the Minecraft chat and places the blocks instantly, as Assembly has not native way to sleep between TRAPS.
 
 [Create Island Video](https://github.com/user-attachments/assets/41e34aeb-3628-47de-9992-2c4d6e8a751b)
 
 ## Technical Specification
-To build and run the code, the [mcpp](https://github.com/rozukke/mcpp) library must be installed, alongside a Spigot server and the ELCI plugin. [LC3](https://github.com/rozukke/lc3-vm-mcpp) for executing compiled object files and [Laser](https://github.com/rozukke/laser-mcpp) for assembling object files from the LC3 Assembly code are also required. Also, [make](https://ftp.gnu.org/gnu/make/) is helpful for streamlining running.
+[Spigot](https://www.spigotmc.org/wiki/spigot-installation/) server with the [ELCI](https://github.com/rozukke/ELCI/releases/tag/test-release) plugin is required. Once the server is running, join the server with `localhost` as the Server Address. To run the program, the [mcpp](https://github.com/rozukke/mcpp) library must be installed to build the [LC-3](https://github.com/rozukke/lc3-vm-mcpp) VM which is also required.
 
-If using most IDE Makefile plugins, set the build target to `run`, then can build and run from IDE. Otherwise, can build and run from terminal (see [Building and Running the code](#building-and-running-the-code))
+### Linux/WSL/macOS
+Download the released `skyblock-generator.obj` executable found here: https://github.com/alexd-ev/skyblock-generator-lc3/releases/latest. Run the program in a terminal:
+```bash
+lc3 skyblock-generator.obj
+```
+
+To build and run the code, [Laser](https://github.com/rozukke/laser-mcpp) for assembling object files is also required. Also [make](https://ftp.gnu.org/gnu/make/) is helpful for streamlining running. If using most IDE Makefile plugins, set the build target to `run`, then can build and run from IDE. Otherwise, can build and run from terminal (see [Building and Running the code](#building-and-running-the-code))
 
 ## Project Structure
 ```
 skyblock-generator-lc3/
 ├── bin/                                    - Generated binary object file directory
 ├── src/
-│   └── main.asm                            - LC3 Assembly source file application entrypoint
+│   └── main.asm                            - LC-3 Assembly source file program entrypoint
 ├── .gitignore                              - Ignore generated binary object file directory
 ├── LICENSE                                 - GPL-3.0 licence
 ├── Makefile                                - Configure build
