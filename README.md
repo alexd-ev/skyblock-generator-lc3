@@ -5,7 +5,12 @@ See my C++ version which showcases removing, recreating and adding the chest and
 [Create Island Video](https://github.com/user-attachments/assets/41e34aeb-3628-47de-9992-2c4d6e8a751b)
 
 ## Technical Specification
-[Spigot](https://www.spigotmc.org/wiki/spigot-installation/) server with the [ELCI](https://github.com/rozukke/ELCI/releases/tag/test-release) plugin is required. Once the server is running, join the server with `localhost` as the Server Address. To run the program, the [mcpp](https://github.com/rozukke/mcpp) library must be installed to build the LC-3 simulator. If on Linux/WSL run this command to update the system's shared library cache:
+[Spigot](https://www.spigotmc.org/wiki/spigot-installation/) server with the [ELCI](https://github.com/rozukke/ELCI/releases/tag/test-release) plugin is required. Edit the `server.properties` file:
+- `gamemode=creative` for player flight
+- `level-type=minecraft\:flat` for setting flat world type
+- `generator-settings={"layers"\:[{"height"\:1,"block"\:"minecraft\:air"}]}` for void world
+
+Once the server is running, join the server with `localhost` as the Server Address. To run the program, the [mcpp](https://github.com/rozukke/mcpp) library must be installed to build the LC-3 simulator. If on Linux/WSL run this command to update the system's shared library cache:
 ```bash
 sudo ldconfig
 ```
